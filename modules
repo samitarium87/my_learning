@@ -1,0 +1,46 @@
+module Greeting
+  GREETING = 'Hello' # CONSTANT IS DEFINED HERE
+  def say_hello(name)
+    puts "#{GREETING}, #{name}"
+  end
+
+  def say_goodbye(name)
+    puts "Goodbye, #{name}!"
+  end
+end
+
+include Greeting
+Greeting.say_hello("Sam")
+Greeting.say_goodbye("Sam")
+
+# Module Definition: You define a module named Tools. Modules in Ruby are collections of methods and constants.
+# They can't be instantiated like classes but can be included in classes or used standalone.
+# end
+
+# Methods: Inside the Tools module, you define two methods:
+# say_hello(name): This method takes a name parameter and prints a greeting message.
+
+# say_goodbye(name): This method takes a name parameter and prints a farewell message.
+# Including the Module: You include the Tools module in the current context using include Tools.
+# This makes the methods defined in the Tools module available as instance methods in the current context
+
+# Using constants in programming, particularly in Ruby, offers several advantages:
+#
+# Readability: Constants provide clear, descriptive names for fixed values, making your code easier to read and understand.
+# For example, using PI instead of 3.14159 immediately tells you that the value represents the mathematical constant pi.
+#
+# Maintainability: If you need to change the value of a constant, you only have to update it in one place.
+# This reduces the risk of errors and makes your code easier to maintain.
+# For instance, if you have a constant TAX_RATE, you can update it in one place if the tax rate changes.
+#
+# Performance: Accessing a constant is generally faster than accessing a variable because the value of a constant
+# is not expected to change. This can lead to slight performance improvements in your code.
+#
+# Intent: Using constants signals to other developers that the value should not be modified.
+# This helps prevent accidental changes and makes the code's intent clearer.
+#
+# Consistency: Constants ensure that the same value is used consistently throughout your code.
+# This is particularly useful for values that are used in multiple places, such as configuration settings or magic numbers.
+------------------------------------------
+# Namespace Management: Modules help organize and group related methods, constants, and classes, preventing name clashes.
+# This is particularly useful in larger projects where different parts of the code might use the same names.
