@@ -1,0 +1,27 @@
+class Book
+  attr_accessor :title, :author, :pages
+  def initialize(title, author, pages)
+    @title = title
+    @author = author
+    @pages = pages
+  end
+
+  def number_of_pages
+    if @pages >= 300
+      return true
+    end
+    return false
+  end
+
+  def is_author
+    if @author == 'Tolkien'
+      puts 'The author is Tolkien'
+    end
+  end
+end
+
+book_one = Book.new('Hobbit', 'Tolkien', 346)
+puts book_one.title
+puts book_one.author
+puts book_one.pages
+
